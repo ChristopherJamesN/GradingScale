@@ -20,6 +20,16 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBOutlet weak var TotalQuestionsTextField: UITextField!
+    @IBOutlet weak var TotalQuestionsCorrectTextField: UITextField!
+    @IBAction func CalculateButton(_ sender: UIButton) {
+        let a:Int? = Int(TotalQuestionsTextField.text!)
+        let b:Int? = Int(TotalQuestionsCorrectTextField.text!)
+        let score = b!/a!
+        let scoreString = String(score)
+        ScoreTextField.text = scoreString
+    }
+    
+    @IBOutlet weak var ScoreTextField: UITextField!
 }
 
