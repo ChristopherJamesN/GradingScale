@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class GradingHelperViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +23,9 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var TotalQuestionsTextField: UITextField!
     @IBOutlet weak var TotalQuestionsCorrectTextField: UITextField!
     @IBAction func CalculateButton(_ sender: UIButton) {
-        let a:Int? = Int(TotalQuestionsTextField.text!)
-        let b:Int? = Int(TotalQuestionsCorrectTextField.text!)
-        let score = b!/a!
+        let TotalQuestions  = Int(TotalQuestionsTextField.text!)
+        let TotalQuestionsCorrect = Int(TotalQuestionsCorrectTextField.text!)
+        let score = TotalQuestionsCorrect!/TotalQuestions!*100
         let scoreString = String(score)
         ScoreTextField.text = scoreString
     }
