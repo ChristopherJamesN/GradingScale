@@ -33,6 +33,18 @@ class GradingHelperViewController: UIViewController {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
+    
+    func showAlertButtonTapped() {
+        
+        // create the alert
+        let alert = UIAlertController(title: "Reminder", message: "Please fill in both fields to calculate a score.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
 
     @IBOutlet weak var TotalQuestionsTextField: UITextField!
     @IBOutlet weak var TotalQuestionsCorrectTextField: UITextField!
@@ -43,6 +55,9 @@ class GradingHelperViewController: UIViewController {
             let score = TotalQuestionsCorrect!/TotalQuestions!*100
             let scoreString = String(score)
             ScoreTextField.text = scoreString
+        }
+        else {
+            showAlertButtonTapped()
         }
     }
     
