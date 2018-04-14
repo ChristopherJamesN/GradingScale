@@ -37,11 +37,13 @@ class GradingHelperViewController: UIViewController {
     @IBOutlet weak var TotalQuestionsTextField: UITextField!
     @IBOutlet weak var TotalQuestionsCorrectTextField: UITextField!
     @IBAction func CalculateButton(_ sender: UIButton) {
-        let TotalQuestions  = Double(TotalQuestionsTextField.text!)
-        let TotalQuestionsCorrect = Double(TotalQuestionsCorrectTextField.text!)
-        let score = TotalQuestionsCorrect!/TotalQuestions!*100
-        let scoreString = String(score)
-        ScoreTextField.text = scoreString
+        if TotalQuestionsTextField.text! != "" && TotalQuestionsCorrectTextField.text! != "" {
+            let TotalQuestions  = Double(TotalQuestionsTextField.text!)
+            let TotalQuestionsCorrect = Double(TotalQuestionsCorrectTextField.text!)
+            let score = TotalQuestionsCorrect!/TotalQuestions!*100
+            let scoreString = String(score)
+            ScoreTextField.text = scoreString
+        }
     }
     
     @IBOutlet weak var ScoreTextField: UITextField!
