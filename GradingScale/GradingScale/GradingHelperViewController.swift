@@ -34,10 +34,22 @@ class GradingHelperViewController: UIViewController {
         view.endEditing(true)
     }
     
-    func showAlertButtonTapped() {
+    func showAlertFieldEmpty() {
         
         // create the alert
         let alert = UIAlertController(title: "Reminder", message: "Please fill in both fields to calculate a score.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showAlertCorrectQuestionsGreaterThanTotalQuestions() {
+        
+        // create the alert
+        let alert = UIAlertController(title: "Note", message: "The number of correct questions entered is greater than the total questions asked.", preferredStyle: UIAlertControllerStyle.alert)
         
         // add an action (button)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -52,12 +64,15 @@ class GradingHelperViewController: UIViewController {
         if TotalQuestionsTextField.text! != "" && TotalQuestionsCorrectTextField.text! != "" {
             let TotalQuestions  = Double(TotalQuestionsTextField.text!)
             let TotalQuestionsCorrect = Double(TotalQuestionsCorrectTextField.text!)
+            if Int(TotalQuestionsCorrect!) > Int(TotalQuestions!){
+                showAlertCorrectQuestionsGreaterThanTotalQuestions()
+            }
             let score = TotalQuestionsCorrect!/TotalQuestions!*100
             let scoreString = String(score)
             ScoreTextField.text = scoreString
         }
         else {
-            showAlertButtonTapped()
+            showAlertFieldEmpty()
         }
     }
     
