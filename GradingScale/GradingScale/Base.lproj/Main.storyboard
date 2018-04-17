@@ -81,38 +81,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter assignment" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Vvm-eS-amB">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter assignment" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Vvm-eS-amB">
                                 <rect key="frame" x="87" y="237" width="202" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter student name" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="fiw-ht-cSH">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter student name" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="fiw-ht-cSH">
                                 <rect key="frame" x="87" y="300" width="202" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter grade" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="NOG-X8-GPF">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter grade" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="NOG-X8-GPF">
                                 <rect key="frame" x="87" y="359" width="202" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-fX-ZHt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-fX-ZHt">
                                 <rect key="frame" x="87" y="418" width="202" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="GradeEntrySubmitButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="6m0-gs-yxO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Grade Entry" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Grade Entry" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
                                 <rect key="frame" x="87" y="161" width="201.5" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -120,6 +115,24 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eg6-fX-ZHt" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="87" id="00D-nx-4RL"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Vvm-eS-amB" secondAttribute="trailing" constant="86" id="0Ni-oQ-Map"/>
+                            <constraint firstItem="Vvm-eS-amB" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="87" id="1zO-An-N16"/>
+                            <constraint firstItem="NOG-X8-GPF" firstAttribute="top" secondItem="fiw-ht-cSH" secondAttribute="bottom" constant="29" id="DFf-DN-wUW"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="fiw-ht-cSH" secondAttribute="trailing" constant="86" id="IY7-75-Vxd"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="87" id="J3S-wR-YLO"/>
+                            <constraint firstItem="eg6-fX-ZHt" firstAttribute="top" secondItem="NOG-X8-GPF" secondAttribute="bottom" constant="29" id="QxR-oh-flb"/>
+                            <constraint firstItem="NOG-X8-GPF" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="87" id="ZGy-N7-5bw"/>
+                            <constraint firstItem="fiw-ht-cSH" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="87" id="cU6-yC-pjK"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="eg6-fX-ZHt" secondAttribute="bottom" constant="170" id="glP-Hf-Xem"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="141" id="lSL-Xd-jh0"/>
+                            <constraint firstItem="fiw-ht-cSH" firstAttribute="top" secondItem="Vvm-eS-amB" secondAttribute="bottom" constant="33" id="mSb-lu-HoV"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="eg6-fX-ZHt" secondAttribute="trailing" constant="86" id="sXg-oN-amf"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="NOG-X8-GPF" secondAttribute="trailing" constant="86" id="vNv-zH-UvF"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="zEq-FU-wV5" secondAttribute="trailing" constant="86.5" id="xSM-7h-yf3"/>
+                            <constraint firstItem="Vvm-eS-amB" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="33" id="yKc-rs-tPG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Grade Entry" image="second" id="cPa-gy-q4n"/>
