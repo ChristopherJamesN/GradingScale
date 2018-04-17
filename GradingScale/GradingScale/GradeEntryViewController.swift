@@ -43,5 +43,10 @@ class GradeEntryViewController: UIViewController {
         // show the alert
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func GradeEntrySubmitButton(_ sender: Any) {
+        showAlertSubmitPress()
+    }
+    
 }
 
