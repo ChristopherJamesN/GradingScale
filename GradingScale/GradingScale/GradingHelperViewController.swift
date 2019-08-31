@@ -37,10 +37,10 @@ class GradingHelperViewController: UIViewController {
     func showAlertFieldEmpty() {
         
         // create the alert
-        let alert = UIAlertController(title: "Reminder", message: "Please fill in both fields to calculate a score.", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Reminder", message: "Please fill in both fields to calculate a score.", preferredStyle: UIAlertController.Style.alert)
         
         // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         
         // show the alert
         self.present(alert, animated: true, completion: nil)
@@ -49,10 +49,10 @@ class GradingHelperViewController: UIViewController {
     func showAlertCorrectQuestionsGreaterThanTotalQuestions() {
         
         // create the alert
-        let alert = UIAlertController(title: "Note", message: "The number of correct questions entered is greater than the total questions asked.", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Note", message: "The number of correct questions entered is greater than the total questions asked.", preferredStyle: UIAlertController.Style.alert)
         
         // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         
         // show the alert
         self.present(alert, animated: true, completion: nil)
@@ -60,10 +60,10 @@ class GradingHelperViewController: UIViewController {
     
     func showAlertInvalidNumber() {
         // create the alert
-        let alert = UIAlertController(title: "Note", message: "Please enter a valid number of questions for the number of questions correct.", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Note", message: "Please enter a valid number of questions for the number of questions correct.", preferredStyle: UIAlertController.Style.alert)
         
         // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         
         // show the alert
         self.present(alert, animated: true, completion: nil)

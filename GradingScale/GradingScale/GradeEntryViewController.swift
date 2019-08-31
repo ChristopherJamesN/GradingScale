@@ -35,10 +35,10 @@ class GradeEntryViewController: UIViewController {
     func showAlertSubmitPress() {
         
         // create the alert
-        let alert = UIAlertController(title: "Message", message: "Grade submission is currently in beta, we plan to have an update in one month.", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Message", message: "Grade submission is currently in beta, we plan to have an update in one month.", preferredStyle: UIAlertController.Style.alert)
         
         // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         
         // show the alert
         self.present(alert, animated: true, completion: nil)
