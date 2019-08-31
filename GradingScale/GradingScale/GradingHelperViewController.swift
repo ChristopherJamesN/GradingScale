@@ -77,6 +77,7 @@ class GradingHelperViewController: UIViewController {
             let TotalQuestionsCorrect = Double(TotalQuestionsCorrectTextField.text!)
             if(TotalQuestionsCorrect == nil) {
                 showAlertInvalidNumber()
+                return
             }
             if Int(TotalQuestionsCorrect!) > Int(TotalQuestions!){
                 showAlertCorrectQuestionsGreaterThanTotalQuestions()
