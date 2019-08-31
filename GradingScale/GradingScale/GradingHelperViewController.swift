@@ -57,6 +57,17 @@ class GradingHelperViewController: UIViewController {
         // show the alert
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func showAlertInvalidNumber() {
+        // create the alert
+        let alert = UIAlertController(title: "Note", message: "Please enter a valid number of questions for the number of questions correct.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
 
     @IBOutlet weak var TotalQuestionsTextField: UITextField!
     @IBOutlet weak var TotalQuestionsCorrectTextField: UITextField!
@@ -64,6 +75,9 @@ class GradingHelperViewController: UIViewController {
         if TotalQuestionsTextField.text! != "" && TotalQuestionsCorrectTextField.text! != "" {
             let TotalQuestions  = Double(TotalQuestionsTextField.text!)
             let TotalQuestionsCorrect = Double(TotalQuestionsCorrectTextField.text!)
+            if(TotalQuestionsCorrect == nil) {
+                showAlertInvalidNumber()
+            }
             if Int(TotalQuestionsCorrect!) > Int(TotalQuestions!){
                 showAlertCorrectQuestionsGreaterThanTotalQuestions()
             }

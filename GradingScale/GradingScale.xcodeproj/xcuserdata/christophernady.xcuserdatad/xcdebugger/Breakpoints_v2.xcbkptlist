@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GradingScale/GradingHelperViewController.swift"
-            timestampString = "545518893.45736"
+            timestampString = "588956807.018352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "CalculateButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
